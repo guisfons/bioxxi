@@ -1,0 +1,105 @@
+
+.contato {
+    &__content {
+        @include form;
+    }
+}
+
+.wpcf7 {
+    margin-top: 4.8rem;
+
+    form {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 2rem;
+
+        label {
+            display: flex;
+            flex-direction: column;
+
+            span {
+                &:first-of-type {
+                    font-size: 1.8rem;
+                    font-weight: 400;
+                    margin-left: .8rem;
+                }
+            }
+
+            br {
+                display: none;
+            }
+
+            input, select, textarea {
+                font-size: 1.6rem;
+                font-weight: 300;
+                padding: 1.15rem 2rem;
+                border-radius: .8rem;
+                outline: none;
+                border: .1rem solid #059888;
+                resize: none;
+                font-family:"Geologica", serif;
+                width: 100%;
+            }
+
+            &:has(.wpcf7-validates-as-required)::after {
+                content: 'campo obrigatório';
+            }
+
+            &:not(:has(.wpcf7-validates-as-required))::after {
+                content: 'campo opcional';
+            }
+
+            &:has(.wpcf7-validates-as-required)::after, &:not(:has(.wpcf7-validates-as-required))::after {
+                font-size: 1.2rem;
+                font-style: italic;
+                color: #fff;
+                font-weight: 400;
+                text-align: right;
+                margin-top: 1rem;
+            }   
+        }
+
+        & > p {
+            flex: 1 0 100%;
+
+            &:has(input[name="telefone"]), &:has(select), &:has(input[name="bairro"]), &:has(input[name="itens"]) {
+                flex: 1 0 50%;
+                max-width: calc(50% - 2rem);
+
+                @include max (600) {
+                    flex: 1 0 100%;
+                    max-width: 100%;
+                }
+            }
+        }
+
+        input, select, textarea {
+            width: 100%;
+        }
+
+        textarea {
+            height: 12.8rem;
+        }
+
+        input[type="submit"] {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #41B17E;
+            appearance: none;
+            border: none;
+            border-radius: .8rem;
+            padding: 1.2rem;
+            font-size: 1.6rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            color: #fff;
+            max-width: 20rem;
+            width: 100%;
+            margin-left: auto;
+            margin-top: 3rem;
+            cursor: pointer;
+        }
+    }
+}

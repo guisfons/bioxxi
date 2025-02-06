@@ -1,0 +1,41 @@
+@import "../abstracts/utilities";
+
+.qualidade-certificacoes {
+    &__info {
+        display: flex;
+
+        article {
+            font-size: 1.6rem;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            max-width: 81.2rem;
+            width: 100%;
+
+            & > *:not(h2) {
+                max-width: 60.1rem;
+            }
+    
+            h2 {
+                text-transform: uppercase;
+                color: #0083CA;
+                font-weight: 300;
+            }
+    
+            p:last-of-type {
+                font-size: 2rem;
+                font-weight: 500;
+                color: #41B17E;
+            }
+        }
+    }
+}
+
+.cards {
+    max-width: 1565px;
+}
+
+.card {
+    flex: 1 0 calc(16.6% - 4rem);
+    max-width: 23.6rem;
+}

@@ -1,0 +1,43 @@
+.intro {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 5.2rem;
+
+    article {
+        max-width: 52.4rem;
+        width: 100%;
+        font-size: 1.6rem;
+        color: #3E3E3E;
+
+        @include max (1100) {
+            max-width: 100%;
+        }
+
+        h2 {
+            font-weight: 300;
+            color: #0083CA;
+            text-transform: uppercase;
+            margin-bottom: 2.6rem;
+        }
+    }
+
+    figure {
+        max-width: 54.9rem;
+        width: 100%;
+        aspect-ratio: 549/247;
+        border-radius: 2.5rem;
+        overflow: hidden;
+
+        @include max (1100) {
+            max-width: 100%;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}

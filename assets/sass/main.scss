@@ -1,0 +1,26 @@
+// SCSS global
+
+@import 'abstracts/variables';
+@import 'abstracts/fonts';
+@import 'abstracts/utilities';
+
+@import 'base/reset';
+
+@import 'components/button';
+@import 'components/title';
+@import 'components/semi-circle';
+
+@import 'page-modules/heading';
+@import 'page-modules/leia-tambem';
+@import 'page-modules/intro';
+@import 'page-modules/form';
+@import 'page-modules/descricao';
+@import 'page-modules/banner';
+@import 'page-modules/certificacoes';
+@import 'page-modules/cards';
+@import 'page-modules/highlight';
+@import 'page-modules/box';
+@import 'page-modules/detalhe';
+
+@import 'layout/footer';
+@import 'layout/header';

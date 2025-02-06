@@ -1,0 +1,134 @@
+.banner {
+    padding: 17.1rem 0 8.2rem;
+
+    &__content {
+        max-width: 100%;
+        text-align: justify;
+
+        &:has(hr+p) hr {
+            display: none;
+        }
+
+        & > *:not(p:last-of-type) {
+            max-width: 68rem;
+        }
+
+        hr + p {
+            display: flex;
+            align-items: center;
+            gap: 5.8rem;
+
+            margin-top: 6rem;
+            background-color: #0083CA;
+            border-radius: 2.5rem;
+            padding: 3.6rem 8.5rem;
+
+            &::before {
+                content: url('data:image/svg+xml,%3Csvg%20width%3D%22111%22%20height%3D%22175%22%20viewBox%3D%220%200%20111%20175%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M27.1951%200.0507468C32.9621%200.366252%2040.0519%20-0.632847%2047.0359%200.734341C53.914%202.04894%2059.734%205.20399%2063.755%2011.1986C75.6595%2028.7617%2087.6168%2046.2722%2099.5742%2063.8353C102.696%2068.4101%20105.765%2072.9849%20108.78%2077.6124C111.214%2081.2932%20111.108%2085.0267%20108.622%2088.655C100.685%20100.329%2092.6961%20111.95%2084.7069%20123.623C77.6171%20133.983%2070.5273%20144.342%2063.4376%20154.648C61.1096%20158.066%2058.8345%20161.484%2056.4007%20164.797C51.3744%20171.633%2043.9672%20174.315%2035.9779%20174.683C25.7666%20175.156%2015.5552%20174.84%205.29087%20174.84C1.53435%20174.84%200%20173.263%200%20169.477C0%20161.274%200%20153.018%200%20144.815C0%20140.924%201.53435%20139.451%205.50251%20139.451C11.0579%20139.399%2016.6133%20139.399%2022.1688%20139.451C23.5973%20139.451%2024.5496%20139.031%2025.4491%20137.769C36.8774%20121.047%2048.3586%20104.325%2059.8927%2087.7085C60.845%2086.3413%2060.845%2085.4474%2059.8927%2084.0802C52.0622%2072.8272%2044.3375%2061.5742%2036.6128%2050.2686C33.6499%2045.9567%2030.6871%2041.75%2027.83%2037.4381C26.9305%2036.1235%2025.9782%2035.545%2024.3909%2035.545C19.4704%2035.5976%2011.3225%2035.5976%206.40196%2035.545C2.69835%2035.545%200.370361%2033.7046%200.317452%2030.1289C0.158726%2021.8206%200.158726%2013.4597%200.317452%205.15141C0.370361%201.89119%202.59253%200.103331%205.81996%200.103331C11.4812%200.0507468%2020.317%200.0507468%2027.1951%200.0507468Z%22%20fill%3D%22%23F2FFF9%22%20fill-opacity%3D%220.25%22%2F%3E%3C%2Fsvg%3E');
+                width: 11rem;
+                height: 17.4rem;
+            }
+        }
+    }
+}
+
+.sobre-nos__linha {
+    display: flex;
+    flex-direction: column;
+    gap: 10.7rem;
+    margin: 13.3rem auto 11.7rem;
+
+    figure {
+        max-width: 1595px;
+        width: 90%;
+        margin: 0 auto;
+
+        img {
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+        }
+    }
+}
+
+.nossos-valores {
+    background-color: #F5F5F5;
+    padding: 8rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 9.5rem;
+
+    .title {
+        justify-content: center;
+    }
+
+    .semi-circle {
+        flex: 1;
+    }
+    
+    .nossos-valores__container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5rem;
+        justify-content: space-between;
+    }
+}
+
+.nossa-historia {
+    margin: 10rem auto;
+
+    &__content {
+        column-count: 2;
+        gap: 5rem;
+        font-size: 1.8rem;
+        color: #3E3E3E;
+        margin-top: 5rem;
+        white-space: break-spaces;
+
+        hr {
+            display: none;
+
+            & + p {
+                font-style: italic;
+            }
+        }
+    }
+}
+
+.highlight {
+    background-color: transparent;
+    border: .5rem solid #005988;
+
+    article {
+        font-size: 1.8rem;
+        font-weight: 500;
+        text-transform: none;
+        color: #005988;
+
+        h2 {
+            color: #41b17e;
+            text-transform: uppercase;
+        }
+    }
+}
+
+.video {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 11.7rem;
+
+    figure {
+        aspect-ratio: 16/9;
+        max-width: 106.3rem;
+        width: 100%;
+        height: auto;
+    
+        iframe {
+            width: 100%;
+            height: 100%;
+        }
+        
+    }
+}

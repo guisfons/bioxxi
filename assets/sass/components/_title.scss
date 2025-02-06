@@ -1,0 +1,59 @@
+.title {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 6.5rem;
+
+    font-size: 4rem;
+    font-weight: 700;
+    color: #005988;
+    text-transform: uppercase;
+
+    &::before, &:not(&--left)::after {
+        content: '';
+        width: 5.2rem;
+        height: 4.5rem;
+        aspect-ratio: 52/45;
+        background-image: url('../img/icons/symbol.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+
+    &::after {
+        scale: -1;
+    }
+
+    &--left {
+        span {
+            display: flex;
+            flex-direction: column;
+
+            span {
+                font-size: 1.8rem;
+                font-weight: 400;
+                line-height: 3rem;
+                color: #3e3e3e;
+                text-transform: initial;
+            }
+        }
+    }
+
+    &--subtitle {
+        text-align: center;
+        justify-content: center;
+
+        span {
+            display: flex;
+            flex-direction: column;
+
+            span {
+                font-size: 2.4rem;
+                color: #41B17E;
+                line-height: 3.6rem;
+                text-transform: initial;
+            }
+        }
+    }
+    
+}

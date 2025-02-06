@@ -1,0 +1,126 @@
+.footer {
+    display: flex;
+    justify-content: center;
+
+    background-color: #005988;
+    color: #fff;
+    padding: 8.6rem 0;
+
+    a {
+        color: #fff;
+    }
+
+    &__container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5rem;
+        justify-content: space-between;
+        align-items: flex-start;
+
+        max-width: 961px;
+        width: 90%;
+
+        @include max (900) {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        & > figure {
+            max-width: 26.5rem;
+            width: 100%;
+            height: auto;
+    
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+        }
+
+        & > span {
+            font-weight: 1rem;
+            width: 100%;
+        }
+    }
+
+    &__menu {
+        width: fit-content;
+
+        ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 1.6rem;
+
+            li, a {
+                font-size: 1.2rem;
+                font-weight: 500;
+                text-transform: uppercase;
+            }
+        }
+    }
+
+    &__contatos {
+        display: flex;
+        flex-direction: column;
+    
+        h4 {
+            font-size: 1.4rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 2rem;
+            color: #fff;
+        }
+    
+        a {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+    
+            &:first-of-type {
+                margin-bottom: 2rem;
+            }
+            
+            &:not(:last-of-type) {
+                font-size: 1.4rem;
+                font-weight: 300;
+            }
+    
+            &:last-of-type {
+                margin-top: 2.7rem;
+                padding: 2rem 3.2rem 2rem 2.4rem;
+                background-color: #41B17E;
+                border-radius: 1rem;
+                font-size: 1.2rem;
+                font-weight: 500;
+                max-width: 32.5rem;
+                width: 100%;
+    
+                span {
+                    max-width: 23.6rem;
+                }
+    
+                figure {
+                    max-width: 3.6rem;
+                    width: 100%;
+                }
+            }
+        }
+    }
+    
+    &__redes {
+        display: flex;
+        flex-direction: column;
+        gap: 2.8rem;
+
+        @include max (900) {
+            flex-direction: row;
+        }
+    
+        a {
+            max-width: 3.2rem;
+            width: 100%;
+            display: flex;
+        }
+    }
+}

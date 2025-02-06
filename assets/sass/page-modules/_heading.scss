@@ -1,0 +1,51 @@
+@import "../abstracts/utilities";
+
+.heading {
+    background: linear-gradient(90deg, rgba(241,250,255,0.75) 12%, rgba(0,131,202,0.75) 60%, rgba(65,177,126,0.75) 95.5%);
+
+    &:not(:has(+.banner)) {
+        margin-bottom: 11rem;
+    }
+
+    &__container {
+        display: flex;
+        padding: .8rem 0;
+        gap: 5rem;
+
+        @include max (600) {
+            flex-direction: column;
+        }
+    }
+
+    &__figure {
+        max-width: 5rem;
+        width: 100%;
+        display: flex;
+
+        img {
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+        }
+    }
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+        gap: .5rem;
+    }
+    
+    &__title {
+        font-size: 3rem;
+        font-weight: 500;
+        text-transform: uppercase;
+        color: #005988;
+        line-height: 1;
+    }
+
+    &__subtitle {
+        font-size: 2rem;
+        font-weight: 300;
+        color: #005988;
+    }
+}

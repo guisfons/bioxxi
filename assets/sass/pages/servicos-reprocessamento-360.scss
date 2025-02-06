@@ -1,0 +1,19 @@
+.cards {
+    max-width: 1565px;
+
+    &__container {
+        gap: 2.5rem;
+    }
+}
+
+.card {
+    min-height: 39rem;
+    flex: 1 0 calc(16.6% - 5rem);
+    gap: 5rem;
+    padding: 4rem 2rem;
+}
+
+.wpcf7 form > p:last-of-type {
+    flex: 1 0 50%;
+    max-width: calc(50% - 2rem);
+}

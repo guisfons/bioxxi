@@ -1,0 +1,13 @@
+.cards {
+    margin-top: 5rem;
+}
+
+.card {
+    // min-height: 39rem;
+    gap: 5rem;
+}
+
+.wpcf7 form > p:last-of-type {
+    flex: 1 0 50%;
+    max-width: calc(50% - 2rem);
+}

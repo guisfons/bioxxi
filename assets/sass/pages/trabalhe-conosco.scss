@@ -1,0 +1,115 @@
+@import "../abstracts/utilities";
+
+.vagas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6.8rem 4.5rem;
+    justify-content: center;
+    margin: 6.6rem auto 11.3rem;
+
+    h2 {
+        font-size: 3rem;
+        color: #005988;
+        text-align: center;
+        text-transform: uppercase;
+        line-height: 1;
+        display: flex;
+        align-items: center;
+        gap: 5rem;
+
+        img {
+            max-width: 5.2rem;
+
+            &:last-of-type {
+                scale: -1;
+            }
+        }
+    }
+
+    &__card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 1.5rem;
+        padding: 5.6rem 4.2rem;
+        flex: 1 0 calc(50% - 2.25rem);
+    
+        &:first-of-type {
+            background-color: #005988;
+    
+            a {
+                color: #005988;
+            }
+        }
+    
+        &:last-of-type {
+            background-color: #41B17E;
+    
+            a {
+                color: #41B17E;
+            }
+        }
+    
+        h3 {
+            font-size: 3.6rem;
+            font-weight: 300;
+            color: #FFFFFF;
+            text-transform: uppercase;
+            text-align: center;
+        }
+    
+        figure {
+            margin: 3.5rem 0 5.5rem;
+            border-radius: 2.5rem;
+            overflow: hidden;
+            width: 100%;
+    
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    
+        a {
+            font-size: 2rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            padding: 1.1rem;
+            width: 100%;
+            text-align: center;
+            background-color: #fff;
+            border-radius: 1.5rem;
+        }
+    }
+
+    &__detalhe {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6.7rem;
+        align-items: center;
+        justify-content: center;
+    
+        &-card {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            gap: 2.1rem;
+            font-size: 1.8rem;
+            font-weight: 400;
+            text-transform: uppercase;
+
+            @include max (600) {
+                min-width: 100%;
+            }
+        
+            &:first-of-type {
+                color: #005988;
+            }
+        
+            &:last-of-type {
+                color: #41B17E;
+            }
+        }
+    }
+}

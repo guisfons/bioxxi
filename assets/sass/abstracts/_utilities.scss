@@ -1,0 +1,64 @@
+@mixin min($screen) {
+    @media only screen and (min-width: $screen+"px") {
+        @content;
+    }
+}
+
+@mixin max($screen) {
+    @media only screen and (max-width: $screen+"px") {
+        @content;
+    }
+}
+
+.mobile-only {
+    @include min(801) {
+        display: none !important;
+    }
+}
+
+.desktop-only {
+    @include max(800) {
+        display: none !important;
+    }
+}
+
+@mixin form {
+    background: url('data:image/svg+xml,%3Csvg%20width%3D%221303%22%20height%3D%22958%22%20viewBox%3D%220%200%201303%20958%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cg%20clip-path%3D%22url(%23clip0_100_976)%22%3E%3Cpath%20d%3D%22M-0.000566259%200.168999C217.624%200.281678%20435.249%200.788735%20652.873%20-2.01391e-05C674.35%20-0.0563598%20686.013%206.76074%20697.396%2024.5077C772.536%20142.089%20848.292%20259.275%20925.226%20375.673C952.927%20417.533%20953.712%20455.788%20925.787%20497.93C829.003%20643.85%20733.396%20790.558%20638.014%20937.492C628.144%20952.704%20617.603%20958.056%20599.603%20958C399.698%20957.437%20199.848%20957.831%20-0.0566406%20958V0.168999H-0.000566259Z%22%20fill%3D%22%233093C8%22%2F%3E%3Cpath%20d%3D%22M1303%20956.761H850.705C855.584%20947.521%20858.555%20940.366%20862.761%20933.999C920.069%20846.278%20977.377%20758.501%201035.08%20671.006C1060.25%20632.864%201091.38%20632.638%201116.33%20670.611C1177.84%20764.304%201238.85%20858.392%201303%20956.761Z%22%20fill%3D%22%233093C8%22%2F%3E%3Cpath%20d%3D%22M905.041%201.40851H1239.3C1235.21%209.69044%201232.74%2016.1695%201229.04%2021.8035C1190.74%2080.5094%201152.44%20139.272%201113.69%20197.752C1088.4%20235.894%201057.34%20236.063%201032.39%20197.978C990.554%20134.145%20949.34%2069.8612%20905.041%201.40851Z%22%20fill%3D%22%233093C8%22%2F%3E%3C%2Fg%3E%3Cdefs%3E%3CclipPath%20id%3D%22clip0_100_976%22%3E%3Crect%20width%3D%221303%22%20height%3D%22958%22%20fill%3D%22white%22%2F%3E%3C%2FclipPath%3E%3C%2Fdefs%3E%3C%2Fsvg%3E');
+    background-color: #0083CA;
+    background-position: center left;
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding: 7rem 0 5rem;
+    color: #fff;
+    margin-top: 8.4rem;
+
+    h2 {
+        font-size: 3rem;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+
+    h3 {
+        font-size: 2.4rem;
+        font-weight: 500;
+        line-height: 3rem;
+        // text-transform: uppercase;
+        margin-top: 1.2rem;
+    }
+}
+
+.w100 {
+    width: 100%;
+}
+
+a:has(> img), figure:has(.w100) {
+    display: flex;
+
+    &:has(.w100) {
+        width: 100%;
+    }
+}
+
+figure:has(.w100) {
+    width: 100%;
+}

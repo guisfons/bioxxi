@@ -1,0 +1,79 @@
+@import '../page-modules/content';
+@import "../abstracts/utilities";
+
+h3 {
+    color: #41B17E;
+}
+
+.termos {
+    &__content {
+        display: flex;
+        flex-direction: column;
+        gap: 2.5rem;
+    
+        h2:has(+hr) {
+            font-size: 3.6rem;
+            font-weight: 300;
+            text-transform: uppercase;
+            color: #0083CA;
+            margin-bottom: 7rem;
+    
+            strong {
+                color: #0083CA;
+            }
+    
+            & + hr {
+                display: none;
+            }
+        }
+    }
+
+    &__detalhe {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5.3rem;
+        margin-top: 6.9rem;
+
+        &-card {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            gap: 2.19rem;
+
+            @include max (768) {
+                min-width: 100%;
+            }
+
+            figure {
+                max-width: 6.211rem;
+                height: auto;
+                display: flex;
+
+                img {
+                    width: 100%;
+                    height: auto;
+                    object-fit: contain;
+                }
+            }
+        
+            article {
+                flex: 1;
+                font-size: 1.6rem;
+                font-weight: 400;
+                color: #005988;
+            
+                p {
+                    color: #005988;
+                
+                    em {
+                        font-size: 1.4rem;
+                    }
+                }
+            }
+
+            &:last-of-type article, &:last-of-type article p, &:last-of-type article p strong {
+                color: #41B17E;
+            }
+        }
+    }
+}

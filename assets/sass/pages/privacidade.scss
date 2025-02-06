@@ -1,0 +1,63 @@
+@import '../page-modules/content';
+
+h3 {
+    color: #41B17E;
+}
+
+.privacidade {
+    &__content {
+        display: flex;
+        flex-direction: column;
+        gap: 2.5rem;
+    
+        h2:has(+hr) {
+            font-size: 3.6rem;
+            font-weight: 300;
+            text-transform: uppercase;
+            color: #0083CA;
+            margin-bottom: 7rem;
+    
+            strong {
+                color: #0083CA;
+            }
+    
+            & + hr {
+                display: none;
+            }
+        }
+    }
+
+    &__detalhe {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2.01rem;
+        margin-top: 6.9rem;
+    
+        figure {
+            max-width: 11.99rem;
+            display: flex;
+
+            img {
+                width: 100%;
+                height: auto;
+                object-fit: contain;
+            }
+        }
+    
+        article {
+            flex: 1;
+            font-size: 1.6rem;
+            font-weight: 400;
+            color: #005988;
+        
+            p {
+                color: #005988;
+            
+                em {
+                    font-size: 1.4rem;
+                }
+            }
+        }
+    }
+}
+

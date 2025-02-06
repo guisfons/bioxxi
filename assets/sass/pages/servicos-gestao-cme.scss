@@ -1,0 +1,14 @@
+.banner {
+    min-height: 50dvh;
+
+    &__video video {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-60%);
+    }
+}
+
+.detalhe__card article {
+    max-width: 40rem;
+    font-size: 1.8rem;
+}
