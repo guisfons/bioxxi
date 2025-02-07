@@ -29,7 +29,35 @@
     <?php endif; ?>
 </section>
 
+<section class="wrapper causas">
+    <h2 class="title"><?php echo get_field('titulo_causa'); ?></h2>
+    <div class="causas__container">
+        <?php
+        if (have_rows('causas')):
+            while (have_rows('causas')): the_row();
 
+                // Recupera os valores dos subcampos
+                $imagem_id = get_sub_field('imagem');
+                $titulo = get_sub_field('titulo');
+
+                // Obtém a URL da imagem
+                $imagem_url = wp_get_attachment_image_url($imagem_id, 'medium');
+                ?>
+                <div class="causas__item">
+                    <?php if ($imagem_url): ?>
+                        <div class="causas__imagem">
+                            <img src="<?php echo esc_url($imagem_url); ?>" alt="<?php echo esc_attr($titulo); ?>">
+                        </div>
+                    <?php endif; ?>
+                    <?php if ($titulo): ?>
+                        <span><?php echo $titulo; ?></span>
+                    <?php endif; ?>
+                </div>
+            <?php endwhile;
+        endif;
+        ?>
+    </div>
+</section>
 
 <section class="sobre-nos__linha">
     <h2 class="wrapper title title--left"><span><?php echo get_field('titulo_linha_do_tempo'); ?><span><?php echo get_field('sub_titulo_linha_do_tempo'); ?></span></span></h2>

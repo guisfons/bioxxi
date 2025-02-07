@@ -18,13 +18,10 @@
     if (have_rows('metodos')): ?>
 	<section class="wrapper esterilizar-title">
         <h2 class="title"><?= $titulo; ?></h2>
-		<div class="esterilizar__box">
-			<span>Pequenos fabricantes a grandes indústrias que produzem EPIs, como jalecos, capotes, mascaras de TNT, protetores faciais, etc.</span>
-			<span>Fabricantes nacionais e internacionais que produzem dispositivos médicos como próteses de silicone, válvulas, cateteres, materiais ventilatórios, etc.</span>
-		</div>
+		<div class="esterilizar__box"><?php echo get_field('destaque_esterilizacao'); ?></div>
     </section>
     <section class="wrapper esterilizar">
-        <h3 class="esterilizar__title">Itens a serem esterilizados</h3>
+        <h3 class="esterilizar__title"><?php echo get_field('titulo_itens'); ?></h3>
 		<div class="esterilizar__container">
         <?php
         while (have_rows('metodos')): the_row();

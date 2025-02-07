@@ -175,26 +175,19 @@
         }
     }
 
-    .esterilizar__box {
-		display: flex;
-		justify-content: space-around;
-		gap: 3.1rem;
-		max-width: 1031px;
-		width: 90%;
-		margin: 9.2rem auto -6.3rem;
-	}
-
 	&__box {
 		display: flex;
 		justify-content: space-around;
 		gap: 3.1rem;
 		max-width: 1031px;
 		width: 90%;
-		margin: 9.2rem auto -6.3rem;
+        margin: 9.2rem auto 0;
 
-        & > span {
+        & > pre {
             flex: 1;
             max-width: 50rem;
+            font-family: inherit;
+            white-space: initial;
             font-size: 1.6rem;
             font-weight: 500;
             color: #fff;

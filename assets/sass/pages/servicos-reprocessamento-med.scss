@@ -1,3 +1,5 @@
+@import '../abstracts/utilities';
+
 .cards {
     margin-top: 5rem;
 }
@@ -5,4 +7,19 @@
 .card {
     // min-height: 39rem;
     gap: 5rem;
+}
+
+.highlight {
+    h2 {
+        font-size: 3.5rem;
+        white-space: nowrap;
+
+        @include max (1100) {
+            white-space: initial;
+        }
+    }
+
+    p:last-of-type {
+        display: none;
+    }
 }

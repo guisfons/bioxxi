@@ -1,3 +1,5 @@
+@import '../abstracts/utilities';
+
 .cards {
     max-width: 1565px;
 
@@ -16,4 +18,19 @@
 .wpcf7 form > p:last-of-type {
     flex: 1 0 50%;
     max-width: calc(50% - 2rem);
+}
+
+.highlight {
+    h2 {
+        font-size: 3.5rem;
+        white-space: nowrap;
+
+        @include max (1100) {
+            white-space: initial;
+        }
+    }
+
+    p:last-of-type {
+        display: none;
+    }
 }

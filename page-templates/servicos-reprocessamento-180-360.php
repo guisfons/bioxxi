@@ -32,7 +32,6 @@
     <?php endif; ?>
     <?php
     get_template_part('template-parts/reprocessamento/highlight');
-    get_template_part('template-parts/reprocessamento/highlight-2');
     
     get_template_part('template-parts/form');
     get_footer();

@@ -7,6 +7,62 @@
     margin: 16.4rem auto 18.2rem;
     padding-bottom: 4.5rem;
 
+    &--processo {
+        margin: 17.9rem auto 15.3rem;
+
+        .box__container {
+            gap: 3.7rem;
+
+            .semi-circle {
+                max-width: 20rem;
+
+                figure {
+                    height: 14.312rem;
+                }
+
+                h4 {
+                    width: 16rem;
+                }
+
+                p {
+                    margin-top: 2.5rem;
+                }
+            }
+        }
+
+        .box__title {
+            display: flex;
+            gap: 1.8rem;
+            top: -3rem;
+
+            article {
+                display: flex;
+                flex-direction: column;
+                gap: .7rem;
+
+                h2 {
+                    font-size: 3rem;
+                    font-weight: 700;
+                }
+
+                h3 {
+                    font-size: 2.4rem;
+                    color: #41B17E;
+                }
+                
+                p {
+                    font-size: 1.8rem;
+                    color: #3E3E3E;
+                }
+                
+                * {
+                    line-height: 1;
+                }
+            }
+        }
+        
+    }
+
     &::before {
         content: '';
         position: absolute;
@@ -33,6 +89,7 @@
     &__container {
         display: flex;
         justify-content: center;
+        flex-wrap: wrap;
         gap: 7.8rem;
         margin: 12.6rem 0 7.4rem;
 

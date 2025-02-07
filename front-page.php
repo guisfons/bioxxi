@@ -80,43 +80,6 @@ if ($secao2): ?>
 	</section>
 <?php endif; ?>
 
-<!-- 3 seção -->
-
-<?php
-if (have_rows('3_secao')): ?>
-    <section class="wrapper causas">
-		<h2 class="title"><?php echo get_field('3_secao_titulo'); ?></h2>
-		<div class="causas__container">
-			<?php
-			// Loop pelos itens do repeater "causas"
-			while (have_rows('3_secao')): the_row();
-				if (have_rows('causas')):
-					while (have_rows('causas')): the_row();
-
-						// Recupera os valores dos subcampos
-						$imagem_id = get_sub_field('imagem');
-						$titulo = get_sub_field('titulo');
-
-						// Obtém a URL da imagem
-						$imagem_url = wp_get_attachment_image_url($imagem_id, 'medium');
-						?>
-						<div class="causas__item">
-							<?php if ($imagem_url): ?>
-								<div class="causas__imagem">
-									<img src="<?php echo esc_url($imagem_url); ?>" alt="<?php echo esc_attr($titulo); ?>">
-								</div>
-							<?php endif; ?>
-							<?php if ($titulo): ?>
-								<span><?php echo $titulo; ?></span>
-							<?php endif; ?>
-						</div>
-					<?php endwhile;
-				endif;
-			endwhile; ?>
-		</div>
-    </section>
-<?php endif; ?>
-
 <!-- Certificações -->
 <?php get_template_part('template-parts/certificacoes'); ?>
 
