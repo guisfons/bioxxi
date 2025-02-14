@@ -21,6 +21,7 @@
         label {
             display: flex;
             flex-direction: column;
+            width: 100%;
 
             span {
                 &:first-of-type {
@@ -66,6 +67,7 @@
 
         & > p {
             flex: 1 0 100%;
+            display: flex;
 
             &:has(input[name="telefone"]), &:has(select), &:has(input[name="bairro"]), &:has(input[name="itens"]) {
                 flex: 1 0 50%;
@@ -76,6 +78,17 @@
                     max-width: 100%;
                 }
             }
+
+            &:has(input[type="submit"]) {
+                justify-content: flex-end;
+                align-items: center;
+                gap: 1.6rem;
+
+                input {
+                    order: 1;
+                    margin-left: 0;
+                }
+            }
         }
 
         input, select, textarea {
@@ -84,6 +97,11 @@
 
         textarea {
             height: 12.8rem;
+        }
+
+        .wpcf7-response-output {
+            font-size: 1.6rem;
+            margin: 0 auto;
         }
 
         input[type="submit"] {
