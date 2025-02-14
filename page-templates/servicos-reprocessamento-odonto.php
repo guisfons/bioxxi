@@ -55,11 +55,6 @@
 <?php endif; ?>
 
 <section style="display: flex;justify-content: center;margin: 17rem 0 0;"><figure><img src="<?php echo get_home_url(); ?>/wp-content/uploads/2025/01/CUSTO-MEDIO-mensal-DE-ESTERILIZACAO-EM-CONSULTORIOodonto.webp" alt="" class="w100"></figure></section>
-<style>
-.contato__content {
-    margin-top: 0;
-}
-</style>
 <!-- <?php get_template_part('template-parts/reprocessamento/highlight'); ?> -->
 
 <?php    

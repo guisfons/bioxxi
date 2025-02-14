@@ -196,7 +196,7 @@
 
 .mapa {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     row-gap: 5rem;
     max-width: 1016px;
     width: 90%;
@@ -214,6 +214,9 @@
         color: #41b17e;
         text-transform: uppercase;
         display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
         flex-direction: column;
         gap: 8rem;
     
