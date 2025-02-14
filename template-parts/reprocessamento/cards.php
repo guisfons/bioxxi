@@ -1,13 +1,14 @@
 <?php
 $titulo = get_field('titulo_cards');
 $subtitulo = get_field('subtitulo_cards');
+
 if (have_rows('cards')): ?>
-    <section class="wrapper cards">
+    <section class="wrapper cards <?php if (is_page('bioxxi-360o') || is_page('bioxxi-180o')) { echo 'box'; } ?>">
         <?php
             if ($subtitulo) {
                 echo '<h2 class="title title--subtitle"><span>' . $titulo . '<span>' . $subtitulo . '</span></span></h2>';
             } else {
-                echo '<h2 class="title">' . $titulo . '</h2>';
+                echo '<h2 class="title ' . (is_page('bioxxi-360o') || is_page('bioxxi-180o') ? 'box__title' : '') . '">' . $titulo . '</h2>';
             }
         ?>
         <div class="cards__container">
@@ -17,7 +18,6 @@ if (have_rows('cards')): ?>
             $icone_id = get_sub_field('icone');
             $conteudo = get_sub_field('conteudo');
             $cor = get_sub_field('cor');
-
            
             $icone_url = $icone_id ? wp_get_attachment_image_url($icone_id, 'medium') : '';
         ?>
@@ -36,5 +36,8 @@ if (have_rows('cards')): ?>
             </div>
         <?php endwhile; ?>
         </div>
+        <?php if (is_page('bioxxi-360o') || is_page('bioxxi-180o')) { ?>
+            <a href="#contato" title="Link ancora para formulário">Quero Contratar</a>
+        <?php } ?>
     </section>
 <?php endif; ?>

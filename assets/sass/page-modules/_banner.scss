@@ -35,6 +35,47 @@
         }
     }
 
+    &-intro {
+        background-color: #0083CA;
+        padding: 4.5rem 0 5.911rem;
+        
+        .wrapper {
+            display: flex;
+            gap: 4.7rem;
+            justify-content: space-between;
+        }
+        
+        article {
+            color: #fff;
+            max-width: 92.7rem;
+            width: 100%;
+            font-size: 2rem;
+
+            h3 {
+                font-size: 3rem;
+                line-height: 4.8rem;
+                text-transform: uppercase;
+                font-weight: 100;
+            }
+        }
+
+        figure {
+            max-width: 20.835rem;
+            width: 100%;
+            height: auto;
+
+            @include max (768) {
+                display: none;
+            }
+
+            img {
+                width: 100%;
+                height: auto;
+                object-fit: contain;
+            }
+        }
+    }
+
     &__content {
         max-width: 72rem;
         width: 100%;

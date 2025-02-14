@@ -6,11 +6,12 @@
     box-sizing: inherit;
 }
 html {
-    font-size: 62.5%;
+    font-size: 50%;
+    // font-size: 62.5%;
     scroll-behavior: smooth;
 
     @include max (1100) {
-        font-size: 50%;
+        // font-size: 50%;
     }
 }
 body {

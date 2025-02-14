@@ -23,6 +23,11 @@ function themeFiles() {
 }
 add_action('wp_enqueue_scripts', 'themeFiles');
 
+function enqueue_ajax_script() {
+    wp_localize_script('blog', 'ajax_object', ['ajax_url' => admin_url('admin-ajax.php')]);
+}
+add_action('wp_enqueue_scripts', 'enqueue_ajax_script');
+
 /**
  * Define pages that don't have template slug
  */

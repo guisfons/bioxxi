@@ -29,7 +29,7 @@
     <?php endif; ?>
 </section>
 
-<section class="wrapper causas">
+<section class="wrapper causas" style="display: none;">
     <h2 class="title"><?php echo get_field('titulo_causa'); ?></h2>
     <div class="causas__container">
         <?php
@@ -57,6 +57,20 @@
         endif;
         ?>
     </div>
+</section>
+
+<section class="wrapper missao-visao">
+    <?php if (have_rows('card_missao_visao')):
+        while (have_rows('card_missao_visao')): the_row();
+            $icone = wp_get_attachment_image(get_sub_field('icone'), 'medium');
+            $conteudo = get_sub_field('conteudo');
+            ?>
+            <div class="missao-visao__card">
+                <figure><?php echo $icone; ?></figure>
+                <article><?php echo $conteudo; ?></article>
+            </div>
+        <?php endwhile;
+    endif; ?>
 </section>
 
 <section class="sobre-nos__linha">

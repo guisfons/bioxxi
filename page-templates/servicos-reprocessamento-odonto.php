@@ -30,10 +30,6 @@
 </section>
 <?php endif; ?>
 
-<?php get_template_part('template-parts/reprocessamento/highlight'); ?>
-<section style="display: flex;justify-content: center;margin: 17rem 0;"><figure><img src="<?php echo get_home_url(); ?>/wp-content/uploads/2025/01/CUSTO-MEDIO-mensal-DE-ESTERILIZACAO-EM-CONSULTORIOodonto.webp" alt="" class="w100"></figure></section>
-
-
 <?php if (have_rows('contratacoes')): ?>
 <section class="wrapper contratacao">
     <h2 class="title"><?php echo get_field('titulo_modelos'); ?></h2>
@@ -48,7 +44,9 @@
             </h3>
             <article><?php echo get_sub_field('descricao'); ?></article>
 
-            <span>Mensalidade a partir de <strong>R$<?php echo get_sub_field('mensalidade'); ?></strong></span>
+            <?php if(!empty(get_sub_field('mensalidade'))): ?>
+            <span>Mensalidade a partir de <strong>R$<?php echo str_replace('.', ',', get_sub_field('mensalidade')); ?></strong></span>
+            <?php endif; ?>
 
             <a href="<?php echo get_sub_field('link_de_contratacao'); ?>" title="Contratar" style="color: <?php echo esc_attr(get_sub_field('cor')); ?>">Quero Contratar</a>
         </div>
@@ -56,6 +54,13 @@
 </section>
 <?php endif; ?>
 
+<section style="display: flex;justify-content: center;margin: 17rem 0 0;"><figure><img src="<?php echo get_home_url(); ?>/wp-content/uploads/2025/01/CUSTO-MEDIO-mensal-DE-ESTERILIZACAO-EM-CONSULTORIOodonto.webp" alt="" class="w100"></figure></section>
+<style>
+.contato__content {
+    margin-top: 0;
+}
+</style>
+<!-- <?php get_template_part('template-parts/reprocessamento/highlight'); ?> -->
 
 <?php    
     get_template_part('template-parts/form');

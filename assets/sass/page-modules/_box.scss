@@ -98,7 +98,7 @@
             width: 100%;
 
             h4 {
-                font-size: 1.2rem;
+                font-size: 1.5rem;
                 width: 20.08rem;
                 line-height: 1.4rem;
             }
@@ -137,6 +137,10 @@
         bottom: -3.3rem;
         right: 7%;
         margin: 0 2rem;
+
+        @include max (600) {
+            right: initial;;
+        }
 
         &::after {
             content: '';

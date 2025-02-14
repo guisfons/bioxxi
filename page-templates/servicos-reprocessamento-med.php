@@ -29,8 +29,8 @@
     <a href="#contato" title="Link ancora para formulário">Quero Contratar</a>
 </section>
 <?php endif; ?>
-<section style="display: flex;justify-content: center;margin: 17rem 0;"><figure><img src="<?php echo get_home_url(); ?>/wp-content/uploads/2025/01/CUSTO-MEDIO-mensal-DE-ESTERILIZACAO-EM-CONSULTORIO-1.webp" alt="" class="w100"></figure></section>
-<?php get_template_part('template-parts/reprocessamento/highlight');?>
+<section style="display: flex;justify-content: center;margin: 17rem 0 0;"><figure><img src="<?php echo get_home_url(); ?>/wp-content/uploads/2025/01/CUSTO-MEDIO-mensal-DE-ESTERILIZACAO-EM-CONSULTORIO-1.webp" alt="" class="w100"></figure></section>
+<!-- <?php get_template_part('template-parts/reprocessamento/highlight');?> -->
 
 <?php    
     get_template_part('template-parts/form');

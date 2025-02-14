@@ -12,7 +12,7 @@
     get_template_part('template-parts/intro');
 ?>
 <section class="wrapper vagas">
-    <h2><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/symbol.svg" alt="Icone"><?= get_field('titulo'); ?><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/symbol.svg" alt="Icone"></h2>
+    <h2 class="title"><?= get_field('titulo'); ?></h2>
 
     <?php if (have_rows('tipos_de_vaga')) :
         while (have_rows('tipos_de_vaga')) : the_row();

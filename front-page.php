@@ -51,6 +51,14 @@ if (have_rows('1_secao')) {
 <?php }
 } ?>
 
+<section class="mapa">
+	<article>
+		<h2 class="title title--left"><?php echo get_field('titulo_mapa'); ?></h2>
+		<?php echo get_field('conteudo_mapa'); ?>
+	</article>
+	<figure><?php echo wp_get_attachment_image( get_field('mapa'), 'full' ); ?></figure>
+</section>
+
 <!-- 2 seção -->
 <?php $secao2 = get_field('2_secao');
 if ($secao2): ?>
@@ -106,7 +114,7 @@ if ($secao2): ?>
 				<div class="blog__item">
 					<figure class="blog__imagem">
 						<?php if (has_post_thumbnail()) : ?>
-							<?php the_post_thumbnail('medium'); ?>
+							<?php the_post_thumbnail('full'); ?>
 						<?php else : ?>
 							<img src="<?php echo get_template_directory_uri(); ?>/assets/img/image.png" alt="<?php the_title(); ?>">
 						<?php endif; ?>

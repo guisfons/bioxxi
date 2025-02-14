@@ -1,14 +1,44 @@
 @import '../abstracts/utilities';
 
 .cards {
+    max-width: 1565px;
+
     &__container {
-        max-width: 800px;
+        gap: 2.5rem;
+    }
+
+    &.box {
+        padding: 8rem 5rem 10rem;
+        margin-bottom: 12rem;
+
+        @include max (600) {
+            padding-top: 15rem;
+        }
+
+        .box__title {
+            font-size: 3rem;
+            font-weight: 700;
+            top: -2.5rem;
+
+            @include max (600) {
+                top: -5rem;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 90%;
+                text-align: center;
+
+                &::before, &::after {
+                    display: none;
+                }
+            }
+        }
     }
 }
 
 .card {
-    min-height: 35rem;
-    flex: 1 0 calc(33.33% - 2.5rem);
+    min-height: 39rem;
+    flex: 1 0 calc(16.6% - 5rem);
+    gap: 5rem;
     padding: 4rem 2rem;
 }
 

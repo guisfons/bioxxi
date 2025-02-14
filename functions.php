@@ -363,7 +363,7 @@ function display_related_posts() {
                     <div class="leia-tambem__card">
                         <figure>
                             <?php if (has_post_thumbnail()) : ?>
-                                <?php the_post_thumbnail('thumbnail'); ?>
+                                <?php the_post_thumbnail('full'); ?>
                             <?php else : ?>
                                 <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/img/image.png'); ?>" alt="Placeholder">
                             <?php endif; ?>
@@ -399,3 +399,55 @@ function semi_circle($image_id, $title, $text, $mais_procurado) { ?>
     </article>
 <?php
 }
+
+function load_more_posts() {
+    $paged = $_POST['page'] + 1;
+    $args = array(
+        'post_type' => 'post',
+        'posts_per_page' => 5,
+        'paged' => $paged
+    );
+
+    $query = new WP_Query($args);
+
+    if ($query->have_posts()) :
+        while ($query->have_posts()): $query->the_post();
+            ?>
+            <div class="blog__card">
+                <figure class="blog__card-image">
+                    <?php
+                    if (has_post_thumbnail()) {
+                        the_post_thumbnail('medium');
+                    } else {
+                        echo '<img src="' . get_template_directory_uri() . '/assets/img/image.png" alt="Placeholder image">';
+                    }
+                    ?>
+                </figure>
+                <article class="blog__card-content">
+                    <span class="blog__card-date"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/calendar.svg" alt="Data">Postado em <time datetime="<?php echo get_the_date('c'); ?>"><?php echo get_the_date('d \d\e F \d\e Y'); ?></time></span>
+                    <hr>
+                    <div class="blog__card-categories">
+                        <?php
+                        $categories = get_the_category();
+                        if ($categories) {
+                            foreach ($categories as $category) {
+                                echo '<span>' . esc_html($category->name) . '</span> ';
+                            }
+                        }
+                        ?>
+                    </div>
+                    <h2><?php echo get_the_title(); ?></h2>
+                    <p><?php echo wp_trim_words(get_the_content(), 100, '...'); ?></p>
+                    <a href="<?php echo get_permalink(); ?>" class="blog__card-link">Continue lendo <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/arrow-right.svg" alt="Seta"></a>
+                </article>
+            </div>
+            <?php
+        endwhile;
+    else :
+        echo ''; // No more posts
+    endif;
+
+    wp_die(); // Don't forget to call this to properly end the AJAX request
+}
+add_action('wp_ajax_load_more_posts', 'load_more_posts');
+add_action('wp_ajax_nopriv_load_more_posts', 'load_more_posts');

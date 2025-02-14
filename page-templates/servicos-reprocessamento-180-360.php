@@ -31,7 +31,7 @@
         </section>
     <?php endif; ?>
     <?php
-    get_template_part('template-parts/reprocessamento/highlight');
+//     get_template_part('template-parts/reprocessamento/highlight');
     
     get_template_part('template-parts/form');
     get_footer();

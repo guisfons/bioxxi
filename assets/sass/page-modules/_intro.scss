@@ -6,9 +6,9 @@
     gap: 5.2rem;
 
     article {
-        max-width: 52.4rem;
+        max-width: 50%;
         width: 100%;
-        font-size: 1.6rem;
+        font-size: 1.8rem;
         color: #3E3E3E;
 
         @include max (1100) {

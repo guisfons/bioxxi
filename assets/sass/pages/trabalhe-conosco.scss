@@ -8,22 +8,8 @@
     margin: 6.6rem auto 11.3rem;
 
     h2 {
-        font-size: 3rem;
-        color: #005988;
-        text-align: center;
-        text-transform: uppercase;
-        line-height: 1;
-        display: flex;
-        align-items: center;
-        gap: 5rem;
-
-        img {
-            max-width: 5.2rem;
-
-            &:last-of-type {
-                scale: -1;
-            }
-        }
+        width: 100%;
+        justify-content: center;
     }
 
     &__card {

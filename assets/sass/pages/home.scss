@@ -95,12 +95,12 @@
         align-items: center;
         flex-wrap: wrap;
         gap: 9.2rem;
-        min-height: 27.3rem;        
+        min-height: 27.3rem;
     }
 
     &__highlight {
         flex: 1;
-        max-width: 21.7rem;
+        max-width: 29rem;
         width: 100%;
         display: flex;
         flex-direction: column;
@@ -194,6 +194,41 @@
     }
 }
 
+.mapa {
+    display: flex;
+    justify-content: center;
+    row-gap: 5rem;
+    max-width: 1016px;
+    width: 90%;
+    margin: 12.5rem auto;
+
+    @include max (900) {
+        flex-wrap: wrap;
+    }
+
+    article {
+        max-width: 56rem;
+        width: 100%;
+        font-size: 3.6rem;
+        font-weight: 100;
+        color: #41b17e;
+        text-transform: uppercase;
+        display: flex;
+        flex-direction: column;
+        gap: 8rem;
+    
+        h2 {
+            font-size: 3rem;
+            gap: 2.188rem;
+        }
+    }
+
+    & > figure {
+        max-width: 52.2rem;
+        width: 100%;
+    }
+}
+
 .servicos {
     display: flex;
     flex-direction: column;
@@ -214,10 +249,9 @@
     }
 }
 
-
 .servico {
     &__item {
-        max-width: 34.5rem;
+        max-width: 40rem;
         width: 100%;
         flex: 1;
         position: relative;
@@ -253,6 +287,7 @@
         & > img {
             margin: 5.4rem 0 0;
             max-width: 9.5rem;
+            height: 9rem;
             object-fit: contain;
         }
 
@@ -262,7 +297,7 @@
             align-items: center;
             width: 100%;
             padding: 1.6rem;
-            font-size: 1.6rem;
+            font-size: 1.7rem;
             font-weight: 500;
             text-transform: uppercase;
             color: #fff;
@@ -279,7 +314,7 @@
         display: flex;
         flex-direction: column;
         gap: 2rem;
-        font-size: 1.4rem;
+        font-size: 1.7rem;
         font-weight: 400;
         color: #3E3E3E;
         margin: 2.6rem 0 3rem;
@@ -289,7 +324,7 @@
         }
 
         p:has(~ hr) {
-            font-size: 1.6rem;
+            font-size: 2rem;
         }
 
         hr {
@@ -303,7 +338,7 @@
             background-color: #DBF2FE;
             border-radius: 1.5rem;
             font-family: "Geologica", serif;;
-            font-size: 1.2rem;
+            font-size: 1.8rem;
             white-space: initial;
         }
     }

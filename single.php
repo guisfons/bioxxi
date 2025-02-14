@@ -21,7 +21,7 @@ $reading_time = calculate_reading_time($content);
         <figure class="single__image">
         <?php
         if (has_post_thumbnail()) {
-            the_post_thumbnail('medium');
+            the_post_thumbnail('full');
         } else {
             echo '<img src="' . get_template_directory_uri() . '/assets/img/image.png" alt="Placeholder image">';
         }

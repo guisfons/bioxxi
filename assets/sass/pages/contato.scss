@@ -1,0 +1,59 @@
+.escritorios {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 7.6rem;
+    margin: 10.3rem auto 11.9rem;
+
+    &__intro {
+        max-width: 39.1rem;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 8rem;
+
+        article {
+            display: flex;
+            flex-direction: column;
+            gap: 3.6rem;
+            font-size: 1.6rem;
+
+            h2 {
+                font-size: 3rem;
+                font-weight: 100;
+                text-transform: uppercase;
+                color: #0083CA;
+            }
+        }
+
+        figure {
+            width: fit-content;
+            display: flex;
+        }
+    }
+
+    &__cards {
+        display: flex;
+        gap: 3rem;
+        align-items: stretch;
+        flex-wrap: wrap;
+    }
+
+    &__card {
+        background-color: #F5F5F5F5;
+        border-radius: 2.5rem;
+        padding: 2.7rem 3.5rem;
+        font-size: 1.6rem;
+        flex: 1;
+        max-width: 35rem;
+        width: 100%;
+        min-width: 25rem;
+
+        h3 {
+            font-size: 2.4rem;
+            text-transform: uppercase;
+            color: #0083CA;
+            margin-bottom: 2.8rem;
+        }
+    }
+}

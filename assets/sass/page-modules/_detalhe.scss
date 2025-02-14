@@ -7,6 +7,10 @@
 
     margin: 9.9rem auto 9.2rem;
 
+    @include max (850) {
+        flex-direction: column;
+    }
+
     &__card {
         flex: 1;
         display: flex;
@@ -17,7 +21,7 @@
         text-transform: uppercase;
         max-width: fit-content;
 
-        @include max (600) {
+        @include max (850) {
             min-width: 100%;
         }
     

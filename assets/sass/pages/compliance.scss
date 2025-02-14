@@ -1,117 +1,128 @@
 @import "../abstracts/utilities";
 
-.compliance__info {
-    display: flex;
-    justify-content: space-between;
-    gap: 6.4rem;
-}
+.compliance {
+    &__info {
+        display: flex;
+        justify-content: space-between;
+        gap: 6.4rem;
+    }
+    
+    &__content {
+        max-width: 67.1rem;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 5.3rem;
+    }
+    
+    &__aside {
+        max-width: 39rem;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
 
-.compliance__content {
-    max-width: 67.1rem;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 5.3rem;
-}
+        figure {
+            width: 100%;
+            aspect-ratio: 39/49.3;
+            border-radius: 2.5rem;
+            overflow: hidden;
 
-.compliance__aside {
-    max-width: 39rem;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 3rem;
-}
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
 
-.compliance__aside figure {
-    width: 100%;
-    aspect-ratio: 39/49.3;
-    border-radius: 2.5rem;
-    overflow: hidden;
-}
+        a {
+            font-size: 2rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 2.7rem;
+            border-radius: 2.5rem;
+            background-color: #41B17E;
+            width: 100%;
+        }
+    }
+    
+    &__content {
+        & > article {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            font-size: 1.8rem;
+            color: #3E3E3E;
+            line-height: 2.4rem;
 
-.compliance__aside figure img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.compliance__aside a {
-    font-size: 2rem;
-    font-weight: 500;
-    text-transform: uppercase;
-    color: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 2.7rem;
-    border-radius: 2.5rem;
-    background-color: #41B17E;
-    width: 100%;
-}
-
-.compliance__content > article {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-    font-size: 1.6rem;
-    color: #3E3E3E;
-    line-height: 2.4rem;
-}
-
-.compliance__content > article h2 {
-    font-weight: 300;
-    color: #0083CA;
-    text-transform: uppercase;
-}
-
-.compliance__container {
-    display: flex;
-    flex-direction: column;
-    gap: 5rem;
-}
-
-.compliance__detalhe {
-    display: flex;
-    gap: 2.6rem;
-}
-
-.compliance__links {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 1.5rem;
-
-    a {
+            h2 {
+                font-weight: 300;
+                color: #0083CA;
+                text-transform: uppercase;
+            }
+        }
+    }
+    
+    &__container {
+        display: flex;
+        flex-direction: column;
+        gap: 5rem;
+    }
+    
+    &__detalhe {
         display: flex;
         align-items: center;
-        gap: 1.9rem;
+        gap: 2.6rem;
 
-        span {
+        & > figure {
+            max-width: 6.3rem;
+            width: 100%;
+            height: 10.2rem;
+        }
+
+        article {
+            max-width: 59.1rem;
+            width: 100%;
             font-size: 1.6rem;
-            font-weight: 400;
-            color: #005988;
+            color: #41B17E;
         }
     }
-
-    figure {
-        max-width: 2.2rem;
-        width: 100%;
-        height: auto;
+    
+    &__links {
         display: flex;
-
-        img {
+        flex-direction: column;
+        justify-content: center;
+        gap: 1.5rem;
+    
+        a {
+            display: flex;
+            align-items: center;
+            gap: 1.9rem;
+    
+            span {
+                font-size: 1.8rem;
+                font-weight: 400;
+                color: #005988;
+            }
+        }
+    
+        figure {
+            max-width: 2.2rem;
             width: 100%;
             height: auto;
-            object-fit: contain;
+            display: flex;
+    
+            img {
+                width: 100%;
+                height: auto;
+                object-fit: contain;
+            }
         }
     }
-}
-
-.compliance__detalhe article {
-    max-width: 59.1rem;
-    width: 100%;
-    font-size: 1.4rem;
-    color: #41B17E;
 }
 
 .banner-denuncia {
@@ -166,10 +177,11 @@
         width: 100%;
         margin-top: -9.3rem;
         display: flex;
+        align-items: flex-end;
 
         img {
             width: 100%;
-            height: 100%;
+            height: auto;
             object-fit: contain;
         }
     }
