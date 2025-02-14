@@ -1,4 +1,9 @@
 $(document).ready(function() {
+    loadMore()
+    filtro()
+})
+
+function loadMore() {
     let current_page = 1;
 
     $('.blog__more').on('click', function () {
@@ -28,4 +33,35 @@ $(document).ready(function() {
             }
         });
     });
-})
+}
+
+function filtro() {
+    $(".filtro__buscar").on("click", function (e) {
+        e.preventDefault();
+
+        let assunto = $("#assunto").val();
+        let searchQuery = $("#search").val();
+
+        $.ajax({
+            url: ajax_object.ajax_url, // Defined via wp_localize_script
+            type: "POST",
+            data: {
+                action: "filter_blog_posts",
+                assunto: assunto,
+                s: searchQuery,
+            },
+            beforeSend: function () {
+                $(".filtro__buscar").text("Buscando...");
+            },
+            success: function (response) {
+                $(".filtro__buscar").text("Buscar");
+                $('.blog__container .blog__card').remove();
+                $('.blog__more').before(response);
+            },
+            error: function () {
+                $(".filtro__buscar").text("Buscar");
+                alert("Erro ao buscar posts!");
+            },
+        });
+    });
+}
