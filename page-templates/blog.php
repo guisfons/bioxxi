@@ -66,9 +66,9 @@
                     }
                     ?>
                 </div>
-                <h2><?php echo get_the_title(); ?></h2>
+                <a href="<?php echo get_permalink(); ?>" title="<?php echo get_the_title(); ?>"><h2><?php echo get_the_title(); ?></h2></a>
                 <p><?php echo wp_trim_words(get_the_content(), 100, '...'); ?></p>
-                <a href="<?php echo get_permalink(); ?>" class="blog__card-link">Continue lendo <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/arrow-right.svg" alt="Seta"></a>
+                <a href="<?php echo get_permalink(); ?>" class="blog__card-link" title="<?php echo get_the_title(); ?>">Continue lendo <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/arrow-right.svg" alt="Seta"></a>
             </article>
         </div>
         <?php
