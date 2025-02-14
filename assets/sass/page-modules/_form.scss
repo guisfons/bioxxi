@@ -2,6 +2,10 @@
 .contato {
     &__content {
         @include form;
+
+        .wrapper {
+            max-width: 1000px;
+        }
     }
 }
 
