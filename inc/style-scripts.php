@@ -18,15 +18,10 @@ function themeFiles() {
 
     wp_register_script('javascript', get_stylesheet_directory_uri() . '/assets/js/main.js', array('jquery'), ASSETS_VERSION, true);
     wp_enqueue_script('javascript');
-
+    
     enqueueTargetAssets(getTargetType());
 }
 add_action('wp_enqueue_scripts', 'themeFiles');
-
-function enqueue_ajax_script() {
-    wp_localize_script('blog', 'ajax_object', ['ajax_url' => admin_url('admin-ajax.php')]);
-}
-add_action('wp_enqueue_scripts', 'enqueue_ajax_script');
 
 /**
  * Define pages that don't have template slug
@@ -127,6 +122,13 @@ function enqueueTargetAssets($page) {
             $handle = "pl-js-{$page}-$i";
             wp_register_script($handle, get_stylesheet_directory_uri() . "/assets/js/pages/{$config->javascripts[$i]}", array('jquery'), ASSETS_VERSION, true);
             wp_enqueue_script($handle);
+
+            if ($page === 'blog') {
+                wp_localize_script($handle, "ajax_object", [
+                    "ajax_url" => admin_url("admin-ajax.php"),
+                ]);
+            }
+            
             if ($config->concat === false) {
                 add_filter('js_do_concat', function ($do_concat, $handle) {
                 if ($config->concat === false) {

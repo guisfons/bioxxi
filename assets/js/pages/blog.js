@@ -16,7 +16,7 @@ $(document).ready(function() {
             data: data,
             success: function (response) {
                 if (response.trim()) {
-                    $('#posts-container').append(response);
+                    $('.blog__more').before(response);
                     current_page++;
                     button.attr('disabled', false).text('Carregar mais');
                 } else {
