@@ -23,6 +23,12 @@ body {
     font-style: normal;
     font-variation-settings: "slnt" 0, "CRSV" 0, "SHRP" 0;
     color: #3e3e3e;
+
+    &:has(.header__trigger--active) {
+        #md-app-widget.md-chat-widget-wrapper {
+            display: none;
+        }
+    }
 }
 
 main {

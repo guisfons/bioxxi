@@ -18,6 +18,10 @@
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center center;
+
+        @include max (600) {
+            display: none;
+        }
     }
 
     &::after {

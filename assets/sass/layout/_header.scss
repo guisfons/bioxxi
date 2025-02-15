@@ -6,6 +6,14 @@
     background-color: #005988;
     padding: 3rem 0;
 
+    &:has(.menu-menu-container) {
+        overflow: hidden;
+    }
+
+    &:has(.menu-menu-container--active) {
+        overflow: initial;
+    }
+
     &__container {
         display: flex;
         align-items: center;
@@ -27,9 +35,64 @@
     }
 
     &__menu {
-        @include max (1100) {
-            & > div {
-                display: none;
+        .menu-menu-container {
+            @include max (1100) {
+                opacity: 0;
+                visibility: hidden;
+                position: fixed;
+                top: 0;
+                left: 0;
+                transform: translateY(-100dvh);
+                width: 100%;    
+                height: 100dvh;
+                transition: all .3s ease-in-out;
+                z-index: 9999;
+                
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: #005988;
+            }
+
+            &--active {
+                opacity: 1;
+                visibility: visible;
+                transform: translateY(0);
+
+                .menu {
+                    flex-direction: column;
+                    gap: 1rem;
+
+                    li:has(.sub-menu) {
+                        flex-direction: column;
+
+                        &::after {
+                            display: none;
+                        }
+                    }
+
+                    .sub-menu, .sub-menu .sub-menu {
+                        position: relative;
+                        top: initial;
+                        left: initial;
+                        transform: initial;
+
+                        opacity: 1;
+                        visibility: visible;
+                        text-align: center;
+
+                        background-color: transparent;
+                        border-radius: initial;
+
+                        .sub-menu {
+                            flex-direction: column;
+
+                            li:not(:last-of-type) {
+                                border: none;
+                            }
+                        }
+                    }
+                }
             }
         }
     }
@@ -44,11 +107,44 @@
         appearance: none;
         background-color: transparent;
         border: none;
+        position: relative;
+        transform: rotate(0deg);
+
+        transition: all .3s ease-in-out;
 
         @include max (1100) {
             display: flex;
         }
 
+        &--active {
+            align-items: center;
+            justify-content: center;
+            transform: rotate(45deg);
+            transition: all .3s ease-in-out;
+            z-index: 999999;
+
+            span {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%) rotate(0deg);
+                transition: all .3s ease-in-out;
+
+                &:first-of-type {
+                    transform: translateY(-50%) rotate(90deg);
+                }
+
+                &:last-of-type {
+                    transform: translateY(-50%) rotate(180deg);
+                }
+
+                &:nth-of-type(2) {
+                    opacity: 0;
+                    visibility: hidden;
+                }
+            }
+        }
+        
+        
         span {
             width: 100%;
             height: .1rem;

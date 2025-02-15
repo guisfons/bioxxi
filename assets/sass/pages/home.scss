@@ -354,6 +354,7 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+        flex-wrap: wrap;
         gap: 5rem;
         
         a {
@@ -369,6 +370,7 @@
             padding: 1rem 2rem;
             border-radius: 2.5rem;
             border: 0.2rem solid #41b17e;
+            margin-left: auto;
         }
     }
 
@@ -387,6 +389,7 @@
         justify-content: center;
         align-items: center;
         flex: 1 0 48rem;
+        max-width: 100%;
         aspect-ratio: 1;
         border-radius: 2.5rem;
         overflow: hidden;
