@@ -6,12 +6,14 @@
     background-color: #005988;
     padding: 3rem 0;
 
-    &:has(.menu-menu-container) {
-        overflow: hidden;
-    }
-
-    &:has(.menu-menu-container--active) {
-        overflow: initial;
+    @include max (1100) {
+        &:has(.menu-menu-container) {
+            overflow: hidden;
+        }
+    
+        &:has(.menu-menu-container--active) {
+            overflow: initial;
+        }
     }
 
     &__container {
