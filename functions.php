@@ -404,7 +404,7 @@ function load_more_posts() {
     $paged = $_POST['page'] + 1;
     $args = array(
         'post_type' => 'post',
-        'posts_per_page' => 5,
+        'posts_per_page' => 6,
         'paged' => $paged
     );
 
