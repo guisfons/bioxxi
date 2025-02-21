@@ -195,8 +195,10 @@
                     }
 
                     &::before, & > .sub-menu {
-                        opacity: 1; 
-                        visibility: visible;
+                        @include min (1101) {
+                            opacity: 1; 
+                            visibility: visible;
+                        }
                     }
                 }
             }

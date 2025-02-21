@@ -1,3 +1,5 @@
+@import '../abstracts/utilities';
+
 .banner__video video {
     position: absolute;
     bottom: -30%;
@@ -15,6 +17,10 @@
         color: #fff;
         padding: 4.2rem 3.25rem 3.5rem;
 
+        @include max (600) {
+            flex: 1 0 40%;
+        }
+ 
         &-content {
             display: flex;
             flex-direction: column;
@@ -78,6 +84,10 @@
         flex-wrap: wrap;
         gap: 9.2rem;
         justify-content: center;
+
+        @include max (600) {
+            gap: 3rem;
+        }
     }
 }
 

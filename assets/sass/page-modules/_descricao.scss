@@ -10,6 +10,10 @@
         color: #3e3e3e;
         margin-top: 5rem;
         white-space: break-spaces;
+
+        @include max (600) {
+            flex-direction: column;
+        }
     
         & > * {
             flex: 1;

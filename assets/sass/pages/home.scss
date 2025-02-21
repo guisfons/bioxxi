@@ -388,11 +388,15 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        flex: 1 0 48rem;
+        flex: 1 0 30%;
         max-width: 100%;
-        aspect-ratio: 1;
+        aspect-ratio: 1640/924;
         border-radius: 2.5rem;
         overflow: hidden;
+
+        @include max (1280px) {
+            flex: 1 0 50rem;
+        }
 
         figure {
             position: absolute;
@@ -438,6 +442,11 @@
             padding: 3.1rem 0;
             border: .1rem solid #fff;
             border-width: .1rem 0;
+
+            @include max (1280px) {
+                padding: 1.1rem 0;
+                max-width: unset;
+            }
         }
 
         span {
@@ -445,6 +454,11 @@
             max-width: 31.5rem;
             width: 100%;
             font-size: 2rem;
+
+            @include max (1280px) {
+                margin: 1rem auto;
+                max-width: unset;
+            }
         }
 
         a {
@@ -456,6 +470,10 @@
             font-weight: 500;
             max-width: 31.5rem;
             width: 100%;
+
+            @include max (1280px) {
+                max-width: unset;
+            }
         }
     }
 }
