@@ -434,14 +434,18 @@
         transition: .3s ease-in-out all;
 
         h3 {
-            max-width: 31.5rem;
-            width: 100%;
+            width: 90%;
             font-size: 2.4rem;
             font-weight: 500;
             line-height: 120%;
             padding: 3.1rem 0;
             border: .1rem solid #fff;
             border-width: .1rem 0;
+
+            display: -webkit-box;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
 
             @include max (1280px) {
                 padding: 1.1rem 0;
@@ -451,8 +455,7 @@
 
         span {
             margin: 1rem auto 4rem;
-            max-width: 31.5rem;
-            width: 100%;
+            width: 90%;
             font-size: 2rem;
 
             @include max (1280px) {
@@ -468,8 +471,7 @@
             text-transform: uppercase;
             font-size: 1.8rem;
             font-weight: 500;
-            max-width: 31.5rem;
-            width: 100%;
+            width: 90%;
 
             @include max (1280px) {
                 max-width: unset;
