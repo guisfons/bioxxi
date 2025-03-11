@@ -29,9 +29,10 @@
     }
 
     &__image {
-        max-width: 44rem;
+        align-self: center;
         width: 100%;
-        aspect-ratio: 1;
+        height: fit-content;
+        aspect-ratio: 1640/924;
         border-radius: 2.5rem;
         overflow: hidden;
 
