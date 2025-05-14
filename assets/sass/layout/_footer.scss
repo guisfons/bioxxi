@@ -76,14 +76,11 @@
             display: flex;
             align-items: center;
             gap: 1rem;
-    
-            &:first-of-type {
-                margin-bottom: 2rem;
-            }
-            
+
             &:not(:last-of-type) {
                 font-size: 1.6rem;
                 font-weight: 300;
+                margin-bottom: 2rem;
             }
     
             &:last-of-type {

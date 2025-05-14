@@ -79,7 +79,7 @@ if ($secao2): ?>
 							<?php echo $servico['conteudo']; ?>
 						</div>
 						<?php if (!empty($servico['link'])): ?>
-							<a href="<?php echo esc_url($servico['link']); ?>" style="background-color: <?php echo esc_attr($servico['cor']); ?>">Quero conhecer</a>
+							<a href="<?php echo esc_url($servico['link']['url']); ?>" style="background-color: <?php echo esc_attr($servico['cor']); ?>"><?php echo html_entity_decode($servico['link']['title']); ?></a>
 						<?php endif; ?>
 					</div>
 				<?php endforeach; ?>
